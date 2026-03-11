@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MJ Jardinagem</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#f4f7f4;
+}
+
+header{
+background:#2e7d32;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#1b5e20;
+padding:10px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+height:70vh;
+background:url("arvore2.jpg") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+}
+
+.hero h1{
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
+}
+
+section{
+padding:60px;
+text-align:center;
+}
+
+.servicos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.card{
+background:white;
+width:250px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.card h3{
+color:#2e7d32;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:10px;
+}
+
+.galeria img{
+width:100%;
+height:130px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+}
+
+footer{
+background:#2e7d32;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:25px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+#modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+#modal img{
+max-width:90%;
+max-height:90%;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🌿 MJ Jardinagem</h1>
+<p>Manutenção de Jardins e Poda de Árvores</p>
+
+</header>
+
+<nav>
+
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+
+</nav>
+
+<div class="hero">
+
+</div>
+
+<section id="sobre">
+
+<h2>Sobre Nós</h2>
+
+<p>
+A <b>MJ Jardinagem</b> é especializada em manutenção de jardins, poda de árvores, paisagismo e limpeza de áreas externas. Nosso objetivo é transformar e cuidar do seu espaço verde com qualidade, segurança e dedicação.
+
+Trabalhamos com profissionais experientes, equipamentos adequados e atenção aos detalhes para garantir um resultado bonito e duradouro.
+
+Oferecemos atendimento rápido, orçamento sem compromisso e suporte direto pelo WhatsApp, sempre buscando a satisfação dos nossos clientes.
+</p>
+
+</section>
+
+<section id="servicos">
+
+<h2>Nossos Serviços</h2>
+
+<div class="servicos">
+
+<div class="card">
+<img src="arvore1.jpg">
+<h3>Poda de Árvores</h3>
+</div>
+
+<div class="card">
+<img src="arvore7.jpg">
+<h3>Manutenção de Jardins</h3>
+</div>
+
+<div class="card">
+<img src="arvore8.jpg">
+<h3>Paisagismo</h3>
+</div>
+
+<div class="card">
+<img src="arvore13.jpg">
+<h3>Remoção de Árvores</h3>
+</div>
+
+<div class="card">
+<img src="arvore11.jpg">
+<h3>Limpeza de Lote e Terreno</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="galeria">
+
+<h2>Galeria de Trabalhos</h2>
+
+<div class="galeria">
+
+<img src="arvore1.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore2.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore3.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore4.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore5.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore7.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore8.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore10.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore11.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore12.jpg" onclick="abrirImagem(this.src)">
+<img src="arvore13.jpg" onclick="abrirImagem(this.src)">
+</div>
+
+</section>
+
+<section id="contato">
+
+<h2>Orçamento</h2>
+
+<br><br>
+
+<a href="https://wa.me/556194174047" 
+style="background:#25D366;color:white;padding:15px 30px;border-radius:25px;text-decoration:none;">
+📲 Falar no WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 MJ Jardinagem</p>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/556194174047">
+💬
+</a>
+
+<div id="modal" onclick="fecharImagem()">
+<img id="imagemGrande">
+</div>
+
+<script>
+
+function abrirImagem(src){
+document.getElementById("modal").style.display="flex";
+document.getElementById("imagemGrande").src=src;
+}
+
+function fecharImagem(){
+document.getElementById("modal").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
